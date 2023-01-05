@@ -71,6 +71,44 @@ body {
     top: -12px;
 }
 
+.dropdown-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    position: absolute;
+    top: 80px;
+    left: 0px;
+    background-color:var(--lightGreen);
+    height: auto;
+    width: 60px;
+    list-style: none;
+}
+
+.dropdown-menu li {
+    width: 100%;
+    border-top: 3px solid var(--purple);
+}
+
+.dropdown-menu ul {
+    padding: 0;
+}
+
+.dropdown-menu a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    padding-left: 10px;
+    padding-top: 10px;
+    color: var(--purple);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.hamb-menu:hover > .dropdown-menu {
+    display: flex; 
+}
+
 .logo {
     display: flex;
     justify-content: center;
@@ -244,4 +282,14 @@ body {
 
 .footer > div {
     font-size: 1.5rem;
+}
+
+
+@media (max-height: 710px) {
+    .main{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        width: 100%;
+        height: auto;
+    }
 }
