@@ -162,8 +162,8 @@ body {
 
 .box-1 {
     display: flex;
-    align-self: center;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     background-color: var(--almostWhite);
     width: 80%;
     height: 95%;
@@ -173,36 +173,43 @@ body {
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.222) ;
 }
 
-.box-1 li {
-    list-style: none;
-    margin-top: 40px;
+
+.form {
+    text-align: start;
+    width: 387px;
     color: var(--purple);
     font-size: 18px;
     font-weight: 700;
+    margin-bottom: 20px;
 }
 
-.list2 > li {
-    background-color: #ededed;
-    height: 20px;
-    width: 120px;
-    margin-top: 41px;
+.form label {
+    display: inline-block;
+    width: 110px;
 }
 
-.list1 {
-    padding: 0;
-    margin: 0;
-    text-align: start;
+.form input, select {
+    background-color: rgb(232, 232, 232);
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 200px;
+    margin-left: 50px;
+    margin-top: 40px;
 }
 
-.fa-caret-down{
-    color:  var(--blue);
-    margin-left: 90px;
+
+input::placeholder {
+    color: var(--purple);
+    font-weight: 700;
+    font-size: 22px;
+    text-align: center;
 }
 
 .newsletter-span {
     align-self: center;
     right: 20px;
-    bottom: 30px;
+    bottom: 20px;
     position: relative;
     margin-right: 20px;
     margin-top: 40px;
@@ -218,7 +225,7 @@ body {
     bottom: -1px;
 }
 
-.edit {
+.ready {
     text-align: center;
     align-self: center;
     width: 140px;
@@ -233,11 +240,10 @@ body {
     padding-bottom: 5px;
 }
 
-.edit a {
+.ready a {
     color: white;
     text-decoration: none;
 }
-
 
 .footer{
     justify-self: end;
@@ -256,6 +262,39 @@ body {
     font-size: 1.5rem;
 }
 
+@media (max-width: 487px) {
+    .form {
+        width: 100%;
+        font-size: 16px;
+    }
+    
+    .form label {
+        display: inline-block;
+        width: 100px;
+    }
+
+    .form select {
+        width: 150px;
+        margin-left: 20px;
+    }
+
+    .form input {
+        width: 150px;
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 387px) {
+    .form input {
+        width: 100px;
+        margin-left: 20px;
+    }
+
+    .form select {
+        width: 100px;
+        margin-left: 20px;
+    }
+}
 
 @media (max-height: 666px) {
     .main{

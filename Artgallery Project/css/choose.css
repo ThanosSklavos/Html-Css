@@ -187,7 +187,7 @@ body {
 .second-div {
     display: flex;
     flex-direction: column;
-    height: 24rem;
+    height: 400px;
     align-items: center;
     justify-items: center;
 }
@@ -195,8 +195,9 @@ body {
 .box-2 {
     position: relative;
     display: flex;
+    flex-direction: column;
     align-self: center;
-    justify-content: center;
+    align-items: center;
     background-color: var(--almostWhite);
     width: 80%;
     height: 90%;
@@ -212,36 +213,51 @@ body {
     font-size: 30px;
 }
 
-.box-2 li {
-    list-style: none;
-    margin-top: 40px;
+.form {
+    width: 387px;
     color: var(--purple);
     font-size: 18px;
     font-weight: 700;
 }
 
-.list2 > li {
-    background-color: #ededed;
-    height: 20px;
-    width: 120px;
-    margin-top: 39px;
+.form label {
+    display: inline-block;
+    width: 110px;
 }
 
-.choice {
-    position: relative;
+.form input {
+    background-color: rgb(232, 232, 232);
+    border: none;
+    padding: 5px;
+    width: 200px;
+    margin-left: 50px;
+    margin-top: 40px;
+}
+
+.save-card {
+    color: var(--purple);
+    font-size: 18px;
+    font-weight: 700;
+    margin-left: 100px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+input::placeholder {
+    color: var(--purple);
+    font-weight: 700;
+    font-size: 22px;
+    text-align: center;
 }
 
 .checkbox {
-    position: absolute;
     color: var(--purple);
     font-size: 16px;
     font-weight: 700;
 }
 
 .verify {
-    position: absolute;
-    bottom: 15px;
-    right: 105px;
+    margin-bottom: 10px;
     color: white;
     font-size: 24px;
     font-weight: 700;
@@ -258,14 +274,17 @@ body {
 }
 
 .edit {
+    display: flex;
+    justify-content: center;
     color: white;
+    height: 60px;
+    width: 150px;
     font-size: 24px;
     font-weight: 700;
     padding: 4px 20px 4px 20px;
     background-color: var(--red);
     border-radius: 25px;
-    justify-self: center;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-bottom: 10px;
 }
 
@@ -293,6 +312,22 @@ body {
     font-size: 1.5rem;
 }
 
+@media (max-width: 487px) {
+    .form {
+        width: 100%;
+        font-size: 16px;
+    }
+    
+    .form label {
+        display: inline-block;
+        width: 100px;
+    }
+    .form input {
+        width: 150px;
+        margin-left: 20px;
+    }
+}
+
 @media (max-width: 387px) {
     .image > img {
         margin-top: 10px;
@@ -307,11 +342,16 @@ body {
         font-size: 18px;
         font-weight: 700;
     }
+
+    .form input {
+        width: 100px;
+        margin-left: 20px;
+    }
 }
 
 
-@media (max-height: 820px) {
+@media (max-height:940px) {
     .main{
-        height: auto;
+        height: 940px;
     }
 }
